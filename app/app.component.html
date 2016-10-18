@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Datos Usuario</h2>
+    <form #eduform="ngForm" (ngSubmit)="onSubmit(eduform.value)">
+        <div class="form-group">
+            <label for="">Nombre</label>
+            <input type="text" class="form-control" name="Nombre" [(ngModel)]="Nombre">
+        </div>
+        <div class="form-group">
+            <label for="">Apellido</label>
+            <input type="text" class="form-control" name="Apellido" [(ngModel)]="Apellido">
+        </div>
+         <div class="form-group">
+            <label for="">Email</label>
+            <input type="text" class="form-control" name="Email" [(ngModel)]="Email">
+        </div>
+         <div class="form-group">
+            <label for="">Telefono</label>
+            <input type="text" class="form-control" name="Telefono" [(ngModel)]="Telefono">
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <button type="reset" class="btn btn-primary">Cancelar</button>
+    </form>
+</div>

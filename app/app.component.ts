@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
-  template: '<h1>Mi Primer Angular 2 </h1>'
+  templateUrl: './app/app.component.html'
 })
-export class AppComponent { }
+export class AppComponent {
+  onSubmit(value : any){
+    console.log(value);
+  }
+ }
