@@ -1,23 +1,34 @@
 <div class="container">
-    <h2>Datos Usuario</h2>
-    <form #eduform="ngForm" (ngSubmit)="onSubmit(eduform.value)">
-        <div class="form-group">
-            <label for="">Nombre</label>
-            <input type="text" class="form-control" name="Nombre" [(ngModel)]="Nombre">
+    <div class="row">
+        <div class="col-md-4">
+             <h2>Datos Usuario</h2>
+            <form #eduform="ngForm" (ngSubmit)="onSubmit(eduform.value)">
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" #NombreRef="ngModel" required  class="form-control" name="Nombre" [(ngModel)]="Nombre">
+                    <div [hidden]="NombreRef.valid || NombreRef.pristine" class="alert alert-danger">
+                        Favor ingresar Nombre..
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Apellido</label>
+                    <input type="text" class="form-control" name="Apellido" [(ngModel)]="Apellido">
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" name="Email" [(ngModel)]="Email">
+                </div>
+                <div class="form-group">
+                    <label for="">Telefono</label>
+                    <input type="text" class="form-control" name="Telefono" [(ngModel)]="Telefono">
+                </div>
+                <button type="submit" class="btn btn-primary">Aceptar</button>
+                <button type="reset" class="btn btn-danger">Cancelar</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="">Apellido</label>
-            <input type="text" class="form-control" name="Apellido" [(ngModel)]="Apellido">
-        </div>
-         <div class="form-group">
-            <label for="">Email</label>
-            <input type="text" class="form-control" name="Email" [(ngModel)]="Email">
-        </div>
-         <div class="form-group">
-            <label for="">Telefono</label>
-            <input type="text" class="form-control" name="Telefono" [(ngModel)]="Telefono">
-        </div>
-        <button type="submit" class="btn btn-primary">Aceptar</button>
-        <button type="reset" class="btn btn-primary">Cancelar</button>
-    </form>
+    </div>
+    <div class="row">
+        <div class="col-md-8"></div>
+    </div>
+   
 </div>
